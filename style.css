@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* ?=====================> Global Style <====================== */
+:root {
+  --paragraphColor: #9fa3a7;
+  --ancorColor: #27b9c2;
+  --bgButton: #ffc80a;
+  --bgTitle: #7bc424;
+  --icloudColor: #8f76bc;
+  --bgCD: #8166b0;
+  --twitterColor: #38d5f4;
+  --twitterColorCircle: #35cfed;
+  --learnMore: #f7f8f9;
+  --bestChoice: #93b6b7;
+  --titleColor: #333;
+  --brandBg: #f05638;
+  --tvBg: #2c2c2c;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: var(--ancorColor);
+}
+
+span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+a,
+p,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+span,
+p {
+  color: var(--paragraphColor);
+}
+
+.item6 figcaption a,
+.item4 .right a {
+  display: block;
+  margin-top: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+h1,
+h2 {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  margin-block: 15px;
+}
+
+.parent {
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item2 item2"
+    "item3 item4 item4 item5"
+    "item6 item7 item7 item5"
+    "item8 item9 item10 item10";
+  grid-template-rows: auto auto auto auto;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* &====================> item-1 */
+.item1 {
+  grid-area: item1;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 3rem 2rem 0rem 2rem;
+  /* flex-wrap: wrap; */
+}
+
+.item1 figcaption {
+  max-width: 250px;
+}
+
+.item1 .iphone-img img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+/* &====================> item-2 */
+.item2 {
+  grid-area: item2;
+  background-color: var(--learnMore);
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.item2 .item-content {
+  max-width: 500px;
+}
+
+.item2 h1 {
+  font-size: 3rem;
+  color: var(--titleColor);
+}
+
+/* &====================> item-3 */
+.item3 {
+  grid-area: item3;
+  flex-direction: column;
+  background-color: var(--brandBg);
+  text-align: center;
+}
+
+.item3 h2 {
+  color: #fff;
+  font-weight: 700;
+  max-width: 300px;
+  margin-inline: auto;
+}
+
+.item3 a {
+  color: var(--bgButton);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.item3 figure img {
+  width: 350px;
+}
+/* &====================> item-4 */
+.item4 {
+  grid-area: item4;
+  overflow: hidden;
+  padding-inline: 2rem;
+  padding-top: 3rem;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item4 .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 300px;
+}
+
+.item4 figcaption {
+  transform: translateX(30px);
+  transition: transform 0.3s ease;
+}
+
+.item4 h2 {
+  font-size: 1.3rem;
+  max-width: 170px;
+}
+
+.item4 .item4-image {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.item4 .item4-image img {
+  width: 100%;
+  transform: translateX(-225px);
+  transition: transform 0.3s ease;
+}
+
+.item4 .right {
+  font-size: 0.9rem;
+  max-width: 300px;
+  flex: 1 1 250px;
+}
+
+/* &====================> item-5 */
+.item5 {
+  grid-area: item5;
+  background-color: var(--icloudColor);
+  flex-direction: column;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.item5 .circle {
+  background-color: var(--bgCD);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item5 .circle .text-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--icloudColor);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.item5 span {
+  font-size: 0.6rem;
+}
+
+.item5 span,
+.item5 p {
+  color: #fff;
+  font-weight: 700;
+}
+
+.item5 .circle .text-block img {
+  width: 10px;
+}
+
+.item5 .CD {
+  width: 210px;
+  margin-block: 20px;
+}
+
+.item5 h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.item5 p {
+  max-width: 290px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.item5 a {
+  display: block;
+  margin-block: 20px 60px;
+  color: #000;
+  background-color: var(--bgButton);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 15px 25px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+/* &====================> item-6 */
+.item6 {
+  grid-area: item6;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item6 figure img {
+  width: 250px;
+  transform: translateX(-25px);
+}
+
+.item6 figcaption {
+  text-align: center;
+}
+
+/* &====================> item-7 */
+.item7 {
+  grid-area: item7;
+  background-color: var(--bestChoice);
+  justify-content: center;
+}
+
+.item7 figure .img {
+  background-image: url("images/UX.png");
+  background-position: center center;
+  background-size: cover;
+  width: 90%;
+  margin: auto;
+}
+
+.item7 figure .img img {
+  margin: auto;
+  transform: translateX(-75px);
+}
+
+.item7 figure h2 {
+  color: #fff;
+  font-weight: 600;
+  max-width: 300px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.item7 figure figcaption span {
+  color: #fff;
+  background-color: var(--brandBg);
+  padding: 7px 10px;
+  font-size: 0.45rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* &====================> item-8 */
+.item8 {
+  grid-area: item8;
+  background-color: var(--twitterColor);
+  justify-content: center;
+  text-align: center;
+}
+
+.item8 figure {
+  width: 250px;
+  height: 250px;
+  background-color: var(--twitterColorCircle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+}
+
+.item8 figure img {
+  width: 50px;
+}
+
+.item8 figure h2 {
+  color: #fff;
+}
+/* &====================> item-9 */
+.item9 {
+  grid-area: item9;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item9 span {
+  background-color: var(--bgTitle);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  color: #fff;
+}
+
+.item9 h2 {
+  max-width: 300px;
+  text-align: center;
+}
+
+/* &====================> item-10 */
+.item10 {
+  grid-area: item10;
+  background-color: var(--tvBg);
+}
+
+.item10 figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.item10 figure img {
+  width: 250px;
+}
+
+.item10 h2 {
+  max-width: 300px;
+  text-align: center;
+  color: #fff;
+}
+
+/* &====================> Media queries */
+@media (max-width: 1200px) {
+  .item4 figcaption {
+    transform: translateX(0);
+  }
+
+  .item4 .item4-image img {
+    transform: translateX(-100px);
+  }
+
+  .item7 figure .img img {
+    transform: translateX(-30px);
+  }
+}
+
+@media (max-width: 992px) {
+  .parent {
+    grid-template-areas:
+      "item2 item2 item2 item2"
+      "item1 item1 item1 item1"
+      "item3 item3 item6 item6"
+      "item4 item4 item4 item4"
+      "item8 item8 item5 item5"
+      "item7 item7 item5 item5"
+      "item9 item9 item9 item9"
+      "item10 item10 item10 item10";
+  }
+
+  .item6,
+  .item9,
+  .item3,
+  .item2 {
+    padding-block: 20px;
+  }
+
+  .item7 figure .img img {
+    transform: translateX(-30px);
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5,
+  .item6,
+  .item7,
+  .item8,
+  .item9,
+  .item10 {
+    overflow: hidden;
+  }
+
+  
+  .item6 figcaption a,
+  .item4 .right a {
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .parent {
+    grid-template-areas:
+      "item2 item2 item2 item2"
+      "item1 item1 item1 item1"
+      "item3 item3 item3 item3"
+      "item6 item6 item6 item6"
+      "item8 item8 item8 item8"
+      "item4 item4 item4 item4"
+      "item5 item5 item5 item5"
+      "item7 item7 item7 item7"
+      "item9 item9 item9 item9"
+      "item10 item10 item10 item10";
+  }
+  .item1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .item1 figcaption {
+    max-width: 100%;
+  }
+
+  .item1 .iphone-img img {
+    max-width: 200px;
+  }
+
+  .item4 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 1rem;
+  }
+
+  .item4 .item4-image img {
+    transform: translateX(0);
+  }
+
+  .item4 .right {
+    max-width: 100%;
+  }
+}
